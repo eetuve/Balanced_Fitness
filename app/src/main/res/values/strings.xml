@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Balanced Fitness</string>
+    <string name="nobuttontext">Ei</string>
+    <string name="yesbuttontext">Kyllä</string>
+    <string name="questiontext">Suoritiko päivän liikunnan?</string>
+    <string name="questiontime">Kuinka kauan? (minuuteissa)</string>
+    <string name="textfield">Kirjoita määrä</string>
+    <string name="confirmbutton">Vahvista</string>
+</resources>
