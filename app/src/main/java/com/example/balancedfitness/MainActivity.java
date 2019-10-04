@@ -10,16 +10,24 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import java.util.Calendar;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+   
+    private MainActivityDay mainActivityDay;
     private Boolean confirmed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mainActivityDay = new MainActivityDay();
+        TextView DW = findViewById(R.id.dayView);
+        TextView SW = findViewById(R.id.sportView);
+        DW.setText(mainActivityDay.getDayTime());
+        SW.setText(mainActivityDay.daysSport());
+        
         Calendar calendar = Calendar.getInstance();
         int dateOfTheYear = calendar.get(Calendar.DAY_OF_YEAR);
 

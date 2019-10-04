@@ -11,14 +11,13 @@ class GlobalModelOfDays {
 
     private GlobalModelOfDays() {
         days = new ArrayList<>();
-        days.add(new Day("Maanantai", "Kestävyys"));
-        days.add(new Day("Tiistai", "Voima"));
-        days.add(new Day("Keskiviikko", "Kestävyys"));
-        days.add(new Day("Torstai", "Voima"));
-        days.add(new Day("Perjantai", "Jooga"));
-        days.add(new Day("Lauantai", "Voima"));
-        days.add(new Day("Sunnuntai", "Lepo"));
-
+        days.add(new Day("Mon", "Kestävyys"));
+        days.add(new Day("Tue", "Voima"));
+        days.add(new Day("Wed", "Kestävyys"));
+        days.add(new Day("Thu", "Voima"));
+        days.add(new Day("Fri", "Jooga"));
+        days.add(new Day("Sat", "Voima"));
+        days.add(new Day("Sun", "Lepo"));
     }
 
 
@@ -27,8 +26,9 @@ class GlobalModelOfDays {
         return days;
     }
 
-
-    public Day getDay (int i) {
+    public Day getDay(int i){
         return this.days.get(i);
     }
+
+
 }

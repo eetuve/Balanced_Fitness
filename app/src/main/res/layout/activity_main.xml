@@ -7,13 +7,12 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/sportView"
         android:layout_width="150dp"
         android:layout_height="81dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:text="Liikuntalaji"
         app:layout_constraintBottom_toTopOf="@+id/entryButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scheduleButton" />
@@ -87,6 +86,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="216dp" />
+        app:layout_constraintGuide_begin="214dp" />
+
+    <TextView
+        android:id="@+id/dayView"
+        android:layout_width="129dp"
+        android:layout_height="70dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/entryButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scheduleButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
