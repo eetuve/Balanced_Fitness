@@ -9,28 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SportDetails"
-            android:parentActivityName=".MainActivity" />
+        <activity android:name=".SportTypeCardio"
+            android:parentActivityName=".ScheduleActivity" />
+        <activity
+            android:name=".SportDetails"
+            android:parentActivityName=".SuggestionActivity" />
 
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".SuggestionActivity" />
-        <activity android:name=".SuggestionActivity" />
+
+        <activity android:name=".SuggestionActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".PerfomanceAmount" />
         <activity android:name=".MainActivity" />
-
         <activity
             android:name=".EntryActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".HistoryActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".ScheduleActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity android:name=".NextPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

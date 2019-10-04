@@ -9,7 +9,6 @@ public class Day {
         this.name = name;
         this.activity = activity;
     }
-
     public String getActivity() {
         return this.activity;
     }
