@@ -10,6 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class PerfomanceAmount extends AppCompatActivity {
 
     @Override
@@ -25,9 +30,14 @@ public class PerfomanceAmount extends AppCompatActivity {
         Perfomance perfomance = new Perfomance(amount);
         HistoryList.getInstance().getHistory().add(perfomance);
 
+        Calendar calendar = Calendar.getInstance();
+        int dayOfTheYear = calendar.get(Calendar.DAY_OF_YEAR);
+        Log.d("Balanced_Fitness_Timer", "" + dayOfTheYear);
+
+
         SharedPreferences prefPut = getSharedPreferences("Amount Confirm", Activity.MODE_PRIVATE);
         SharedPreferences.Editor prefEditor = prefPut.edit();
-        prefEditor.putBoolean("CONFIRM_KEY", true);
+        prefEditor.putInt("DATE_KEY", dayOfTheYear);
         prefEditor.commit();
 
         startActivity(intent);

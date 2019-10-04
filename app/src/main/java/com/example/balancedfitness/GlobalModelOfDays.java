@@ -20,6 +20,8 @@ class GlobalModelOfDays {
         days.add(new Day("Sun", "Lepo"));
     }
 
+
+
     public ArrayList<Day> getDays() {
         return days;
     }
@@ -27,5 +29,6 @@ class GlobalModelOfDays {
     public Day getDay(int i){
         return this.days.get(i);
     }
+
 
 }
