@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void pressSchedule(View view) {
+        Log.d("Balanced_Fitness", "pressSchedule()");
         Intent intent = new Intent(MainActivity.this, ScheduleActivity.class);
         startActivity(intent);
     }
@@ -57,10 +58,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void pressRecommendations(View view) {
+        Log.d("Balanced_Fitness", "pressRecommendation()");
         Intent intent = new Intent(MainActivity.this, SuggestionActivity.class);
         startActivity(intent);
     }
     public void pressHistory(View view) {
+        Log.d("Balanced_Fitness", "pressHistory()");
         Intent intent = new Intent(MainActivity.this, HistoryActivity.class);
         startActivity(intent);
     }
