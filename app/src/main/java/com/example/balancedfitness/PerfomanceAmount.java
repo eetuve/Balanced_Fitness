@@ -3,12 +3,14 @@ package com.example.balancedfitness;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -27,8 +29,21 @@ public class PerfomanceAmount extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         TextView tv = findViewById(R.id.editText);
         String amount = tv.getText().toString();
-        Perfomance perfomance = new Perfomance(amount);
-        HistoryList.getInstance().getHistory().add(perfomance);
+        try {
+            Integer.parseInt(amount);
+            Perfomance perfomance = new Perfomance(amount);
+            HistoryList.getInstance().getHistory().add(perfomance);
+
+        } catch (Exception error) {
+            Log.d("BALANCED FITNESS", "Exception in confirm(): " + error);
+            Log.d("BALANCED FITNESS", "User input not integer, is " + amount.getClass());
+            Context context = getApplicationContext();
+            CharSequence message = "Syötä määrä kokonaislukuna.";
+            int duration = Toast.LENGTH_SHORT;
+            Toast popup = Toast.makeText(context, message, duration);
+            popup.show();
+            intent = new Intent(this, PerfomanceAmount.class);
+        }
 
         Calendar calendar = Calendar.getInstance();
         int dayOfTheYear = calendar.get(Calendar.DAY_OF_YEAR);
