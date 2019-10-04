@@ -10,6 +10,14 @@ public class Day {
         this.activity = activity;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public String getActivity(){
+        return this.activity;
+    }
+
     public String toString(){
         return this.name + ": " + this.activity;
     }
