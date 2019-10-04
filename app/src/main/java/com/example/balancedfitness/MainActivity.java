@@ -11,16 +11,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     //private Boolean confirmed;
-    private MainActivityDay mainActivityDay;
+    private DayAndSport dayAndSport;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mainActivityDay = new MainActivityDay();
+        dayAndSport = new DayAndSport();
         TextView DW = findViewById(R.id.dayView);
         TextView SW = findViewById(R.id.sportView);
-        DW.setText(mainActivityDay.getDayTime());
-        SW.setText(mainActivityDay.daysSport());
+        DW.setText(dayAndSport.getDayTime());
+        SW.setText(dayAndSport.daysSport());
         //confirmed = false;
     }
     public void pressSchedule(View view) {
