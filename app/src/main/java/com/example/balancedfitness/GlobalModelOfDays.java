@@ -21,7 +21,14 @@ class GlobalModelOfDays {
 
     }
 
+
+
     public ArrayList<Day> getDays() {
         return days;
+    }
+
+
+    public Day getDay (int i) {
+        return this.days.get(i);
     }
 }
