@@ -14,7 +14,9 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
-    private Boolean confirmed;
+
+    private Boolean confirmed; 
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
