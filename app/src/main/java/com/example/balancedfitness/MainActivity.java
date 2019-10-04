@@ -7,13 +7,20 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     //private Boolean confirmed;
+    private MainActivityDay mainActivityDay;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mainActivityDay = new MainActivityDay();
+        TextView DW = findViewById(R.id.dayView);
+        TextView SW = findViewById(R.id.sportView);
+        DW.setText(mainActivityDay.getDayTime());
+        SW.setText(mainActivityDay.daysSport());
         //confirmed = false;
     }
     public void pressSchedule(View view) {
