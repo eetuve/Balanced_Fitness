@@ -16,12 +16,12 @@ public class ScheduleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
-        ListView recyclerView = (ListView) findViewById(R.id.listView);
-        recyclerView.setAdapter(new ArrayAdapter<Day>(
+        ListView lv = (ListView) findViewById(R.id.listView);
+        lv.setAdapter(new ArrayAdapter<Day>(
                 this,
                 R.layout.day_item_layout,
                 GlobalModelOfDays.getInstance().getDays()));
-     recyclerView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+     lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             Log.d("QWE", "onItemClick(" + i + ")");
