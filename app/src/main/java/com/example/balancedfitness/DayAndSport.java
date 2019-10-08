@@ -23,7 +23,7 @@ public class DayAndSport {
     public String daysSport() {
         while (number <= GlobalModelOfDays.getInstance().getDays().size()) {
             if (getDayTime().equals(GlobalModelOfDays.getInstance().getDay(number).getName())){
-                Log.d("BreakCheck", "fds");
+                Log.d("BreakCheck", "Found the right sport for the day.");
                 break;
             }
             number++;
