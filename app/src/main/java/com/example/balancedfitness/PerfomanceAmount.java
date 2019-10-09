@@ -19,20 +19,37 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**Luokka määrittelee PerfomanceAmount näkymän.
+ * @author Teemu Viljanen, Eetu Vehnämäki, Jere Tallbacka
+ * @version 1.2 10/2019
+ */
 public class PerfomanceAmount extends AppCompatActivity {
     private DayAndSport dayAndSport;
 
+    /**
+     * luodaan näkymä
+     * @param savedInstanceState instanssin tila
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfomance_amount);
     }
+
+    /**
+     * Vahvistusnappi jota painamalla siirrytään seuraavaan näkymään ja tallennetaan annettu arvo
+     * @param view vahvistusnapin view
+     */
     public void confirm(View view) {
         Log.d("BALANCED FITNESS", "confirm()");
 
         Intent intent = new Intent(this, MainActivity.class);
         TextView tv = findViewById(R.id.editText);
         String amount = tv.getText().toString();
+
+        //tarkastetaan, että käyttäjä laittaa vain kokonaislukuja
+        //luetaan historialista String-muodossa, ja tallennetaan uusi arvo String muodossa siihen
+
         try {
             Integer.parseInt(amount);
             Perfomance perfomance = new Perfomance(amount);

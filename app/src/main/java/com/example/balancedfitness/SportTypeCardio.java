@@ -10,9 +10,18 @@ import android.widget.TextView;
 
 import java.util.Random;
 
+/**
+ * Luokka näyttää päivän ja lajiehdotuksen päivälle asetetun lajityypin perusteella.
+ * @author Teemu Viljanen, Eetu Vehnämäki, Jere Tallbacka
+ * @version 1.2 10/2019
+ */
+
 public class SportTypeCardio extends AppCompatActivity {
 
-
+    /**
+     * Hakee lähettävän intentin tiedot ja asettaa sopivat määritteet tekstikenttiin.
+     * @param savedInstanceState lähetetyn instanssin tila.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,12 +29,14 @@ public class SportTypeCardio extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         int i = b.getInt("INDEX", 0);
 
-
+        //Hakee instanssin GlobalModelOfDays-singletonista.
         ((TextView)findViewById(R.id.textView2))
                 .setText(GlobalModelOfDays.getInstance().getDay(i).getName());
         ((TextView)findViewById(R.id.textView3))
                 .setText(GlobalModelOfDays.getInstance().getDay(i).getActivity());
 
+        //Vertaa GlobalModelOfDays- ja Suggestionlist- singletoneja.
+        //Antaa satunnaisen indeksiluvun, jolla lajiehdotus haetaan SuggestionList-singletonin listasta, johon on määritetty järjestykseen tietyt määrät kutakin vaihtoehtoa.
         Random rand = new Random();
         int u = rand.nextInt(4);
         int t = rand.nextInt(4) + 4;
@@ -49,6 +60,11 @@ public class SportTypeCardio extends AppCompatActivity {
         }
 
     }
+
+    /**
+     * Luo intentin joka lätettää SuggestionActivity-luokkaan.
+     * @param view näkymä.
+     */
     public void moveSuggestions(View view) {
         Intent intent = new Intent(this, SuggestionActivity.class);
         startActivity(intent);

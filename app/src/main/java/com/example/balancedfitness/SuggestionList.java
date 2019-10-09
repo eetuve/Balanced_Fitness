@@ -2,13 +2,25 @@ package com.example.balancedfitness;
 
 import java.util.ArrayList;
 
+/**
+ * Singleton-luokka sisältää listan mahdollisia urheilulajeja, jotka luodaan Sport-luokan avulla.
+ * @author Teemu Viljanen, Eetu Vehnämäki, Jere Tallbacka
+ * @version 1.2 10/2019
+ */
+
 class SuggestionList {
+
+    /**
+     * Singleton-luokan instanssimääritys.
+     * ArralyList hakee määritteensä Sport-luokasta.
+     */
     private static final SuggestionList ourInstance = new SuggestionList();
     private ArrayList<Sport> sports;
     static SuggestionList getInstance() {
         return ourInstance;
     }
 
+    //Tässä luodaan ArrayList sports. Määritteet luokan Sport mukaan.
     private SuggestionList() {
         sports = new ArrayList<>();
         sports.add(new Sport("Running Hills", "Cardio", "Running is a Cardio Classic. " +
@@ -41,10 +53,19 @@ class SuggestionList {
                 "\n\nFor example, are you familiar with a game called Dota?"));
     }
 
+    /**
+     * Palauttaa Sport-olioista luodun listan.
+     * @return listan osat Sport-luokan toString-metodin mukaan.
+     */
     public ArrayList<Sport> getSports(){
         return sports;
     }
 
+    /**
+     * Palauttaa tietyn olion listasta indeksiluvun perusteella.
+     * @param i indeksiluku.
+     * @return listan olion joka vastaa indeksilukua.
+     */
     public Sport getSport (int i) {
         return this.sports.get(i);
     }

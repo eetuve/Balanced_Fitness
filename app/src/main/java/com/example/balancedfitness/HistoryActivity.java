@@ -13,7 +13,17 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**Luokka määrittelee HistoryActivity aktiviteetin sekä sijoittaa HistoryList listan ListViewiin.
+ * @author Teemu Viljanen, Eetu Vehnämäki, Jere Tallbacka
+ * @version 1.2 10/2019
+ */
 public class HistoryActivity extends AppCompatActivity {
+
+    /**
+     * Luo näkymän, jossa on HistoryList
+     * Hakee listan String muodossa SharedPreferencistä ja muuttaa sen takaisin listaksi
+     * @param savedInstanceState instanssin tila
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

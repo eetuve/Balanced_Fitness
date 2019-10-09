@@ -5,8 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+/**
+ * Luokka näyttää yksityiskohtaisempia tietoja Sport-luokan avulla tehdystä oliosta.
+ * @author Teemu Viljanen, Eetu Vehnämäki, Jere Tallbacka
+ * @version 1.2 10/2019
+ */
+
 public class SportDetails extends AppCompatActivity {
 
+    /**
+     * Hakee lähettävän intentin tiedot ja asettaa sopivat määritteet tekstikentiin.
+     * @param savedInstanceState lähetetyn instanssin tila.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
