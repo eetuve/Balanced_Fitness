@@ -25,7 +25,6 @@ public class Sport {
     }
 
     public String toString(){
-        //return this.type + ": " + this.name;
         return this.name + " (" + this.type + ")";
     }
 }

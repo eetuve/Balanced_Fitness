@@ -11,34 +11,34 @@ class SuggestionList {
 
     private SuggestionList() {
         sports = new ArrayList<>();
-        sports.add(new Sport("Mäkijuoksu", "Kestävyys", "Juokseminen on kestävyysharjoittelun klassikko. " +
-                "\nMutta tiesitkö, että mäkijuoksu on tasaisella maalla juoksemista tehokkaampaa treeniä?"));
-        sports.add(new Sport("Uinti", "Kestävyys","Uinti toteutetaan vedessä, yleensä uima-altaassa. " +
-                "\nJalat pärskyttävät vettä ja on tosi hauskaa. \nMutta myös kunto kohenee ;)"));
-        sports.add(new Sport("Pyöräily", "Kestävyys", "Ehkä omistat polkupyörän? Silloin olet onnekas. " +
-                "\nPyöräily on loistava kestävyyttä lisäävä harjoitus. " +
-                "\nPyöriä voi myös vuokrata, ellet omista sellaista. " +
-                "\n\n(Muista myös kuntopyörät!)"));
-        sports.add(new Sport("Naruhyppely", "Kestävyys","Naruhyppely on erinomainen kestävyysharjoite. " +
-                "\nMieleen tulee ikonisia kuvia narua hyppäävistä nyrkkeilijöistä salilla sparrauskierrosten välissä. " +
+        sports.add(new Sport("Running Hills", "Cardio", "Running is a Cardio Classic. " +
+                "\nBut did you know that running hills is a more effective exercise than running on flat ground?"));
+        sports.add(new Sport("Swimming", "Cardio","Swimming is done in water, usually a swimming pool. " +
+                "\nWater splashes around and you're having so much fun. \nBut you're also getting fitter ;)"));
+        sports.add(new Sport("Cycling", "Cardio", "Maybe you own a bicycle. Then you are lucky. " +
+                "\nCycling is a great cardio exercise. " +
+                "\nYou can also rent bikes, if you don't own one " +
+                "\n\n(Also remember stationary bikes!)"));
+        sports.add(new Sport("Skipping Rope", "Cardio","Skipping rope is a great cardio exercise. " +
+                "\nYou think of iconic images of boxers skipping around the gym between sparring bouts. " +
                 "\nEye of the Tiger, baby!"));
-        sports.add(new Sport("Punttitreeni", "Voima", "Punttitreeni on klassikko. " +
-                "\nEi muuta kuin salille ja puntit tassuihin.\nYlös alas, toistoja toiston perään!"));
-        sports.add(new Sport("Kehopainotreeni", "Voima","Kehopainotreeni on hyvä vaihtoehto painoharjoittelulle. " +
-                "\nEsimerkiksi lankut, punnerrukset ja leuanvedot ovat erinomaisia voimankasvattajia."));
-        sports.add(new Sport("Kahvakuulat", "Voima","Kahvakuula on erinomainen voimaharjoitteluväline." +
-                "\nMuista kuitenkin turvallisuus! Aloita kahvakuulaharjoittelu kokeneen ohjaajan kanssa."));
-        sports.add(new Sport("Core-treeni", "Voima","Core pitää koko kehoa koossa. " +
-                "\nVatsan ja kylkien lihakset ovat tärkeimpiä lihaksia kehon kokonaisvaltaisen hyvinvoinnin kannalta. " +
-                "\n\nEntä milloin viimeksi treenasit selkälihaksiasi?"));
-        sports.add(new Sport("Astangajooga", "Jooga", "Astangajooga on voimistelullinen joogamuoto, jossa hiki virtaa. " +
-                "\nHengitys ohjaa liikettä ja punnertamista. (Sitä kutsutaan Vinyasaksi)"));
-        sports.add(new Sport("Hot Yoga", "Jooga", "Hot Yogaa tehdään lämmitetyssä salissa. " +
-                "\nKuuma ilma auttaa lihaksia rentoutumaan ja saa hien virtaamaan."));
-        sports.add(new Sport("Nokoset", "Lepo", "Nukkuminen on erittäin tärkeää palautumisen kannalta. " +
-                "\nJollet saanut viime yönä kahdeksaa tuntia unta, mitä jos ottaisit pienet nokoset?"));
-        sports.add(new Sport("E-Sports", "Lepo", "Lepopäivän ratoksi voi vaikka istuutua mukavasti sohvalle ja alkaa räiskiä jotain absurdia mättöpeliä. " +
-                "\n\nTunnetko esimerkiksi peliä nimeltä Dota?."));
+        sports.add(new Sport("Weight Training", "Strength", "Weight training is a classic. " +
+                "\nJust get to the gym and get those weights in your mits.\nUp, dow, reps, baby, reps!"));
+        sports.add(new Sport("Bodyweight Training", "Strength","Bodyweight training is a great alternative to weight training. " +
+                "\nPlanks, push-ups and pull-ups are great builders of strength."));
+        sports.add(new Sport("Kettlebells", "Strength","Kettlebells are an excellent tool for strength building." +
+                "\nBut remember safety! Start your kettlebell exercising with an experienced coach."));
+        sports.add(new Sport("Core Training", "Strength","Core holds the entire body together. " +
+                "\nStomach muscles are the most important muscles ones for balanced health of the body. " +
+                "\n\nAnd when was the last time you exercised your back muscles?"));
+        sports.add(new Sport("Astanga Yoga", "Yoga", "Astanga Yoga is a demanding yogavariety, that really makes you sweat. " +
+                "\nYour breath guides all your movements. (That is called Vinyasa)"));
+        sports.add(new Sport("Hot Yoga", "Yoga", "Hot Yogaa is done in a heated room. " +
+                "\nHot air helps relax your muscles and makes you really sweat."));
+        sports.add(new Sport("A Nap", "Rest", "Sleeping is very important for your recovery. " +
+                "\nIf you didn't get eight hours last night, why not take a little nap?"));
+        sports.add(new Sport("E-Sports", "Rest", "For your rest day, you can sit don comfortably on your couch and start mayhem on your games console. " +
+                "\n\nFor example, are you familiar with a game called Dota?"));
     }
 
     public ArrayList<Sport> getSports(){

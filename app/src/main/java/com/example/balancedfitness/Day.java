@@ -9,8 +9,15 @@ public class Day {
         this.name = name;
         this.activity = activity;
     }
+    public String getActivity() {
+        return this.activity;
+    }
 
+    public String getName() {
+        return this.name;
+    }
     public String toString(){
         return this.name + ": " + this.activity;
     }
+
 }
