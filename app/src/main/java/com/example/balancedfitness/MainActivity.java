@@ -12,7 +12,12 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.Calendar;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Boolean confirmed;
@@ -36,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("Balanced_Fitness", "Previous confirm date was number " + previousConfirmDate);
         Log.d("Balanced_Fitness", "Date today is number " + dateOfTheYear);
+        
         if (previousConfirmDate != dateOfTheYear) {
             confirmed = false;
         } else {
