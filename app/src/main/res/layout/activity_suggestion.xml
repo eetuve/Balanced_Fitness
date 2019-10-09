@@ -10,6 +10,7 @@
         android:id="@+id/suggestionList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/background_dark"
         tools:layout_editor_absoluteX="98dp"
         tools:layout_editor_absoluteY="281dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

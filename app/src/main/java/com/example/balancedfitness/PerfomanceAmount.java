@@ -40,7 +40,7 @@ public class PerfomanceAmount extends AppCompatActivity {
             String amountString = perfomance.toString();
             Log.d("TO_SINGLETON", "'amount' as string is " + amountString);
             SharedPreferences prefGet = getSharedPreferences("Amount Confirm", Activity.MODE_PRIVATE);
-            String historyString = prefGet.getString("STRING_KEY", "defaultValue");
+            String historyString = prefGet.getString("STRING_KEY", "");
             historyString += amountString;
             String listAsString = HistoryList.getInstance().listToString(historyString);
             SharedPreferences prefPut = getSharedPreferences("Amount Confirm", Activity.MODE_PRIVATE);
@@ -49,11 +49,12 @@ public class PerfomanceAmount extends AppCompatActivity {
             prefEditor.putString("STRING_KEY", listAsString);
             prefEditor.commit();
 
+
         } catch (Exception error) {
             Log.d("BALANCED FITNESS", "Exception in confirm(): " + error);
             Log.d("BALANCED FITNESS", "User input not integer, is " + amount.getClass());
             Context context = getApplicationContext();
-            CharSequence message = "Syötä määrä kokonaislukuna.";
+            CharSequence message = "Input the amount as an integer.";
             int duration = Toast.LENGTH_SHORT;
             Toast popup = Toast.makeText(context, message, duration);
             popup.show();

@@ -7,13 +7,12 @@ import java.util.Date;
 
 public class DayAndSport {
     private String name;
-    private String nameFin;
     private String activity;
     private Day day;
     private int number = 0;
 
     public DayAndSport() {
-        day = new Day(name, nameFin, activity);
+        day = new Day(name, activity);
     }
     public String getDayTime() {
         SimpleDateFormat sdf = new SimpleDateFormat("EEE");

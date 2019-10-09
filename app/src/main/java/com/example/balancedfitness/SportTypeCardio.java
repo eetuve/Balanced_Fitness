@@ -22,7 +22,7 @@ public class SportTypeCardio extends AppCompatActivity {
 
 
         ((TextView)findViewById(R.id.textView2))
-                .setText(GlobalModelOfDays.getInstance().getDay(i).getNameFin());
+                .setText(GlobalModelOfDays.getInstance().getDay(i).getName());
         ((TextView)findViewById(R.id.textView3))
                 .setText(GlobalModelOfDays.getInstance().getDay(i).getActivity());
 
@@ -31,21 +31,21 @@ public class SportTypeCardio extends AppCompatActivity {
         int t = rand.nextInt(4) + 4;
         int e = rand.nextInt(2) + 8;
         int f = rand.nextInt(2) + 10;
-        if (GlobalModelOfDays.getInstance().getDay(i).getActivity().contains("Kestävyys")){
+        if (GlobalModelOfDays.getInstance().getDay(i).getActivity().contains("Cardio")){
             ((TextView)findViewById(R.id.textView5))
-                    .setText("Mietitkö kestävyyslajia?\n\n" + SuggestionList.getInstance().getSport(u).getDescription());
+                    .setText("What kind of cardio to do?\n\n" + SuggestionList.getInstance().getSport(u).getDescription());
         }
-        if (GlobalModelOfDays.getInstance().getDay(i).getActivity().contains("Voima")){
+        if (GlobalModelOfDays.getInstance().getDay(i).getActivity().contains("Strength")){
             ((TextView)findViewById(R.id.textView5))
-                    .setText("Mietitkö voimalajia?\n\n" + SuggestionList.getInstance().getSport(t).getDescription());
+                    .setText("What kind of strength training to do?\n\n" + SuggestionList.getInstance().getSport(t).getDescription());
         }
-        if (GlobalModelOfDays.getInstance().getDay(i).getActivity().contains("Jooga")){
+        if (GlobalModelOfDays.getInstance().getDay(i).getActivity().contains("Yoga")){
             ((TextView)findViewById(R.id.textView5))
-                    .setText("Mietitkö joogatyyliä?\n\n" + SuggestionList.getInstance().getSport(e).getDescription());
+                    .setText("What kind of Yoga to do?\n\n" + SuggestionList.getInstance().getSport(e).getDescription());
         }
-        if (GlobalModelOfDays.getInstance().getDay(i).getActivity().contains("Lepo")){
+        if (GlobalModelOfDays.getInstance().getDay(i).getActivity().contains("Rest")){
             ((TextView)findViewById(R.id.textView5))
-                    .setText("Mietitkö lepotyyliä?\n\n" + SuggestionList.getInstance().getSport(f).getDescription());
+                    .setText("What to do with your rest day?\n\n" + SuggestionList.getInstance().getSport(f).getDescription());
         }
 
     }

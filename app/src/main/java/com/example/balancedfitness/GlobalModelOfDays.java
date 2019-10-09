@@ -11,13 +11,13 @@ class GlobalModelOfDays {
 
     private GlobalModelOfDays() {
         days = new ArrayList<>();
-        days.add(new Day("Mon", "Maanantai", "Kestävyys"));
-        days.add(new Day("Tue", "Tiistai", "Voima"));
-        days.add(new Day("Wed", "Keskiviikko", "Kestävyys"));
-        days.add(new Day("Thu", "Torstai", "Voima"));
-        days.add(new Day("Fri", "Perjantai","Jooga"));
-        days.add(new Day("Sat", "Lauantai", "Voima"));
-        days.add(new Day("Sun", "Sunnuntai","Lepo"));
+        days.add(new Day("Mon", "Cardio"));
+        days.add(new Day("Tue", "Strength"));
+        days.add(new Day("Wed", "Cardio"));
+        days.add(new Day("Thu", "Strength"));
+        days.add(new Day("Fri", "Yoga"));
+        days.add(new Day("Sat", "Strength"));
+        days.add(new Day("Sun", "Rest"));
     }
 
 

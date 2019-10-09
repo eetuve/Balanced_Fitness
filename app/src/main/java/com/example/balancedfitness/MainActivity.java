@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("Balanced_Fitness", "Previous confirm date was number " + previousConfirmDate);
         Log.d("Balanced_Fitness", "Date today is number " + dateOfTheYear);
-        
+
+        //dateOfTheYear = 0;
         if (previousConfirmDate != dateOfTheYear) {
             confirmed = false;
         } else {
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Balanced_Fitness", "confirmed is " + confirmed);
         if (confirmed) {
             Context context = getApplicationContext();
-            CharSequence message = "Olet jo kirjannut päivän liikunnan.";
+            CharSequence message = "You have already logged your performance for the day.";
             int duration = Toast.LENGTH_SHORT;
             Toast popup = Toast.makeText(context, message, duration);
             popup.show();

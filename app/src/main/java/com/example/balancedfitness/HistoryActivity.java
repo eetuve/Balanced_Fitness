@@ -21,7 +21,7 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         Intent intent = getIntent();
         SharedPreferences prefGet = getSharedPreferences("Amount Confirm", Activity.MODE_PRIVATE);
-        String historyString = prefGet.getString("STRING_KEY", "defaultValue");
+        String historyString = prefGet.getString("STRING_KEY", "");
 
         Log.d("History_Activity", "historyString is: " + historyString);
         ArrayList<String> historyList = new ArrayList<String>(Arrays.asList(historyString.split("\\*")));
