@@ -47,14 +47,18 @@ public class PerfomanceAmount extends AppCompatActivity {
         TextView tv = findViewById(R.id.editText);
         String amount = tv.getText().toString();
 
-        //tarkastetaan, että käyttäjä laittaa vain kokonaislukuja
+        //tarkastetaan, että käyttäjä laittaa vain positiivisia kokonaislukuja
         //luetaan historialista String-muodossa, ja tallennetaan uusi arvo String muodossa siihen
 
         try {
-            Integer.parseInt(amount);
+            int amountInt = Integer.parseInt(amount);
+            if (amountInt < 0 || amountInt > 1440) { // 1440 is the amount of minutes in 24 hours.
+                throw new IllegalArgumentException();
+            }
             Perfomance perfomance = new Perfomance(amount);
             HistoryList.getInstance().getHistory().add(perfomance);
             String amountString = perfomance.toString();
+            Log.d("TO_SINGLETON", "'amountInt' is " + amountInt);
             Log.d("TO_SINGLETON", "'amount' as string is " + amountString);
             SharedPreferences prefGet = getSharedPreferences("Amount Confirm", Activity.MODE_PRIVATE);
             String historyString = prefGet.getString("STRING_KEY", "");
@@ -69,9 +73,9 @@ public class PerfomanceAmount extends AppCompatActivity {
 
         } catch (Exception error) {
             Log.d("BALANCED FITNESS", "Exception in confirm(): " + error);
-            Log.d("BALANCED FITNESS", "User input not integer, is " + amount.getClass());
+            Log.d("BALANCED FITNESS", "User input invalid " + amount.getClass());
             Context context = getApplicationContext();
-            CharSequence message = "Input the amount as an integer.";
+            CharSequence message = "Invalid input!";
             int duration = Toast.LENGTH_SHORT;
             Toast popup = Toast.makeText(context, message, duration);
             popup.show();
