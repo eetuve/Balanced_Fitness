@@ -40,8 +40,8 @@ class SuggestionList {
                 "\nPlanks, push-ups and pull-ups are great builders of strength."));
         sports.add(new Sport("Kettlebells", "Strength","Kettlebells are an excellent tool for strength building." +
                 "\nBut remember safety! Start your kettlebell exercising with an experienced coach."));
-        sports.add(new Sport("Core Training", "Strength","Core holds the entire body together. " +
-                "\nStomach muscles are the most important muscles ones for balanced health of the body. " +
+        sports.add(new Sport("Core Training", "Strength","The Core is what holds the entire body together. " +
+                "\nStomach muscles are the most important muscles for balanced health of the body. " +
                 "\n\nAnd when was the last time you exercised your back muscles?"));
         sports.add(new Sport("Astanga Yoga", "Yoga", "Astanga Yoga is a demanding yogavariety, that really makes you sweat. " +
                 "\nYour breath guides all your movements. (That is called Vinyasa)"));
