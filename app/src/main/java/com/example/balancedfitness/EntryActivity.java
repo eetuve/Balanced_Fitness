@@ -36,16 +36,6 @@ public class EntryActivity extends AppCompatActivity {
      * @param view "Ei"-nappi
      */
     public void noButton(View view) {
-        Calendar calendar = Calendar.getInstance();
-        int dayOfTheYear = calendar.get(Calendar.DAY_OF_YEAR);
-
-
-        //tallennetaan tämänhetkinen päivä int-muodossa laskettuna vuoden alusta avaimella "DATE_KEY"
-        SharedPreferences prefPut = getSharedPreferences("Amount Confirm", Activity.MODE_PRIVATE);
-        SharedPreferences.Editor prefEditor = prefPut.edit();
-        prefEditor.putInt("DATE_KEY", dayOfTheYear);
-
-        prefEditor.commit();
         Log.d("BALANCED FITNESS", "noButton()");
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
